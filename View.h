@@ -2,9 +2,6 @@
 #pragma comment (lib, "opengl32.lib")
 #include <QGLWidget>
 #include <QtOpenGL>
-//#include <glut.h>
-//#include <gl/GL.h>
-//#include <gl/GLU.h>
 
 #include <qimage.h>
 #include <algorithm>
@@ -57,9 +54,6 @@ private:
 
 	QImage textureImage;
 	QOpenGLTexture* texture;
-	//GLuint VBOtexture;
-
-	//void Load2DTexture();
 
 protected:
 	void initializeGL() override;

@@ -17,7 +17,6 @@ void View::initializeGL()
 	glMatrixMode(GL_MODELVIEW);
 
 	glLoadIdentity();
-	//glGenTextures(1, &VBOtexture);
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE); //цвет текстуры перекрывает цвет пикселя
 }
 
@@ -464,11 +463,9 @@ void View::VisualizationTexture()
 {
 	glEnable(GL_TEXTURE_2D);
 
-	//glBindTexture(GL_TEXTURE_2D, VBOtexture);
 	texture->bind();
 
 	glBegin(GL_QUADS);
-	//glColor(1, 1, 1);
 
 	glTexCoord2f(0, 0);
 	glVertex2i(0, 0);
@@ -623,7 +620,6 @@ void View::axisSetXY(bool checked)
 {
 	if (checked)
 	{
-		//axis = (axis + 1) % 3;
 		axis = 0;
 		qDebug() << "New axis is " << axis;
 		resize(clamp(data.getHeight(), MIN_WIN_SIZE, MAX_WIN_SIZE), clamp(data.getDepth(), MIN_WIN_SIZE, MAX_WIN_SIZE));
@@ -641,7 +637,6 @@ void View::axisSetXY(bool checked)
 				genTextureImageXZ();
 				break;
 			}
-			//Load2DTexture();
 		}
 		update();
 	}
@@ -651,7 +646,6 @@ void View::axisSetYZ(bool checked)
 {
 	if (checked)
 	{
-		//axis = (axis + 1) % 3;
 		axis = 1;
 		qDebug() << "New axis is " << axis;
 		resize(clamp(data.getWidth(), MIN_WIN_SIZE, MAX_WIN_SIZE), clamp(data.getHeight(), MIN_WIN_SIZE, MAX_WIN_SIZE));
@@ -669,7 +663,6 @@ void View::axisSetYZ(bool checked)
 				genTextureImageXZ();
 				break;
 			}
-			//Load2DTexture();
 		}
 		update();
 	}
@@ -679,7 +672,6 @@ void View::axisSetXZ(bool checked)
 {
 	if (checked)
 	{
-		//axis = (axis + 1) % 3;
 		axis = 2;
 		qDebug() << "New axis is " << axis;
 		resize(clamp(data.getWidth(), MIN_WIN_SIZE, MAX_WIN_SIZE), clamp(data.getDepth(), MIN_WIN_SIZE, MAX_WIN_SIZE));
@@ -697,7 +689,6 @@ void View::axisSetXZ(bool checked)
 				genTextureImageXZ();
 				break;
 			}
-			//Load2DTexture();
 		}
 		update();
 	}

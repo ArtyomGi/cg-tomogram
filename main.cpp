@@ -68,6 +68,5 @@ int main(int argc, char *argv[])
 	w.setFocusPolicy(Qt::StrongFocus);
 
 
-	//w.show();
 	return a.exec();
 }
